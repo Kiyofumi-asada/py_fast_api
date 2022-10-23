@@ -1,12 +1,7 @@
-from fastapi import FastAPI, APIRouter
-from controller.user import router as userRouter
-
-router = APIRouter()
-router.include_router(
-    userRouter,
-    prefix='/users',
-    tags=['users']
-)
+from fastapi import FastAPI
 
 app = FastAPI()
-app.include_router(router)
+
+@app.get('/')
+async def root():
+    return {'message': 'Hello World'}
