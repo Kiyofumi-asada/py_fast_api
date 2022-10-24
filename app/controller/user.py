@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List
 from database import get_db
 import models.user as userModel
-from res_schemas.user import User
+from res_types.user import User
 
 router = APIRouter()
 
