@@ -8,10 +8,6 @@ $ docker-compose up
 
 http://localhost:8888
 
-- if you want to start with Swagger
-
-http://localhost:8888/docs#
-
 ## create migration file
 
 ```
@@ -26,13 +22,23 @@ $ docker-compose run api bash
 # alembic upgrade head
 ```
 
-## other
-
-create envfile as root
+## DB access
 
 ```
-.env.development
+$ docker-compose run api bash
+# cd /usr/src/app/db
+# mysql -u root -p
+> password
+```
 
+## setting env
+
+```
+$ vi .env.development
+```
+
+```
+# .env.development
 MYSQL_USER=root
 MYSQL_PASSWORD=password
 MYSQL_ROOT_PASSWORD=password

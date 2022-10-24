@@ -6,6 +6,7 @@ class User(BaseModel):
   id: int
   userName: str
   isDelete: bool
+  # relation
   task: List[Task] = []
   class Config:
     orm_mode = True
