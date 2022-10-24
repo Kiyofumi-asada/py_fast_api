@@ -2,6 +2,6 @@ from sqlalchemy.orm import Session
 from schemas.user import User
 
 # read
-def read_users(db: Session):
+def read(db: Session):
     data = db.query(User).all()
     return data

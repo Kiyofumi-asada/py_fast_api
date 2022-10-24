@@ -3,13 +3,12 @@ from sqlalchemy.orm import Session
 from typing import List
 from database import get_db
 from response_models.user import User
-import models.user as userModel
+import models.task as taskModel
 
 router = APIRouter()
 
-# /user
+# /task
 # read
 @router.get('/', response_model=List[User])
-async def read_users(db: Session = Depends(get_db)):
-    data = userModel.read_users(db=db)
-    return data
+async def read_task_list(db: Session = Depends(get_db)):
+    return taskModel.read(db=db)
