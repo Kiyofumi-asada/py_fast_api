@@ -1,5 +1,7 @@
 # fast api
 
+Python,FastAPI,Docker,Mysql,MariaDB
+
 ## local start
 
 ```
