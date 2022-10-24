@@ -2,7 +2,10 @@ from typing import List
 from pydantic import BaseModel
 from .task import Task
 
-class User(BaseModel):
+class RequestUserModel(BaseModel):
+  userName: str
+
+class ResponseUserModel(BaseModel):
   id: int
   userName: str
   isDelete: bool
