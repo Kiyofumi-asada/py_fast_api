@@ -2,10 +2,13 @@ from typing import List
 from pydantic import BaseModel
 from .task import Task
 
-class RequestUserModel(BaseModel):
+class PostReqUserModel(BaseModel):
+  userName: str
+class PutReqUserModel(BaseModel):
+  id: int
   userName: str
 
-class ResponseUserModel(BaseModel):
+class ResUserModel(BaseModel):
   id: int
   userName: str
   isDelete: bool
