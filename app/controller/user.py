@@ -8,8 +8,6 @@ import models.user as userModel
 # /user
 router = APIRouter()
 
-# get
-
 # post
 @router.post('/', response_model=ResUserModel)
 def create_user(body: PostReqUserModel, db: Session = Depends(get_db)):
